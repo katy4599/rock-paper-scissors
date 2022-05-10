@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background-image: url(/assets/background3.jpg);
+    background-size: cover;
+    
+}
+
+.title {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.content {
+    display:flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.selections {
+    margin-top: 3%;
+    
+}
+
+.player {
+    padding: 3% 0 3% 3%; 
+}
+
+.middle {
+    padding: 3% 10%;
+}
+
+.computer {
+    padding: 3% 3% 3% 0;
+}
+
+.pselect {
+    margin-left: 10%;
+}
+
+.cselect {
+    margin-right: 10%;
+}
+
+.images {
+    overflow: hidden; 
+    display: flex; 
+    justify-content:space-around;
+}
+
+.selects {
+    max-width: 20%; 
+    max-height: 20%;
+}
+
+.result {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.lower-row {
+    display: flex;
+}
+
+.buttons {
+    margin-top: 20%;
+
+}
+
+.win-statement {
+    text-align: center;
+}
+
+.scoreboard {
+    margin-top: 20%;
+}
