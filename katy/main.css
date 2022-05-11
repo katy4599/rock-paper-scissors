@@ -1,13 +1,16 @@
 body {
     margin: 0;
-    background-image: url(/assets/background3.jpg);
+    background-image: url("../assets/backgroundbw.jpg");
     background-size: cover;
-    
 }
 
 .title {
     text-align: center;
     margin-top: 5%;
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
 }
 
 .content {
@@ -45,6 +48,12 @@ body {
     overflow: hidden; 
     display: flex; 
     justify-content:space-around;
+    
+}
+.win-image {
+    border: 6px solid;
+    border-radius: 10;
+    border-color: black;
 }
 
 .selects {
@@ -72,4 +81,5 @@ body {
 
 .scoreboard {
     margin-top: 20%;
+    background-color: #ced4da;
 }

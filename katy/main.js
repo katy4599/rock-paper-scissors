@@ -1,47 +1,12 @@
 const winner = document.getElementById("win-statement");
 const cselect = document.getElementById("cselect");
 const pselect = document.getElementById("pselect");
-// const wins = 0;
-// const losses = 0;
-// const draws = 0;
 
- //function greet() {
-    //     const name = prompt('What is your name?');
-    //     alert(`Hello ${name}, nice to see you! I can\t wait to beat you at Rock, Paper, Scissors`);
-    //   };
-    // playerImage = "url('./assests/niceweather.jpg')";
-    // winImage = "url('./assests/niceweather.jpg')";
-    // compImage = "url('./assests/niceweather.jpg')";
-    
-    let wins = document.getElementById("wins");
-    let losses = document.getElementById("losses");
-    let draws = document.getElementById("draws");
-        draws.innerText = 0;
-        losses.innerText = 0;
-        wins.innerText = 0;
-    
-
-    // if (sessionStorage.getItem("autosave")) {
-    //     // Restore the contents of the text field
-    //     draws.innerText = sessionStorage.getItem("autosave");
-    //     losses.innerText = sessionStorage.getItem("autosave");
-    //     wins.innerText = sessionStorage.getItem("autosave");
-    //   }
-    //   draws.innerText.addEventListener("change", function() {
-    //     // And save the results into the session storage object
-    //     sessionStorage.setItem("autosave", draws.innerText);
-    //     });
-    //     losses.innerText.addEventListener("change", function() {
-    //     sessionStorage.setItem("autosave", losses.innerText);
-    //     });
-    //     wins.innerText.addEventListener("change", function() {
-    //     sessionStorage.setItem("autosave", wins.innerText);
-    //     });
-    
-    //   draws.innerText = sessionStorage.getItem('draws.innerText');
-    //   losses.innerText = sessionStorage.getItem('losses.innerText');
-    //   wins.innerText = sessionStorage.getItem('wins.innerText');
-      
+ function greet() {
+    losses.innerText = sessionStorage.getItem('losses.innerText');
+    wins.innerText = sessionStorage.getItem('wins.innerText');
+    draws.innerText = sessionStorage.getItem('draws.innerText');
+        
       const buttons = document.getElementsByClassName("buttons");
       for (let i = 0; i < buttons.length; i++) {
           buttons[i].addEventListener("click", (event) => {
@@ -50,9 +15,6 @@ const pselect = document.getElementById("pselect");
               let playerImage = document.getElementById("player-image");
               let winImage = document.getElementById("win-image");
               let compImage = document.getElementById("comp-image");
-              // let draws = document.getElementById("draws");
-              // let losses = document.getElementById("losses");
-              // let wins = document.getElementById("wins");
               
               switch (event.target.value) {
                   case 'rock':
@@ -61,63 +23,79 @@ const pselect = document.getElementById("pselect");
                           compImage.src = '../assets/rock.jpg';
                           winImage.src = '../assets/draw.jpg';
                           winner.innerHTML = "It's a draw!";
-                          draws.innerText = parseInt(draws.innerText)+1;
+                          draws.innerText = Number(draws.innerText)+1;
+                          window.sessionStorage.setItem("draws.innerText", draws.innerText.toString());
                         } else if (compInput === 1) {
                             compImage.src = '../assets/paper.jpg';
                             winImage.src = '../assets/papercoversrock.jpg';
                             winner.innerHTML = "Computer Wins!";
-                            losses.innerText = parseInt(losses.innerText)+1;
+                            losses.innerText = Number(losses.innerText)+1;
+                            window.sessionStorage.setItem("losses.innerText", losses.innerText.toString());
                         } else {
                             compImage.src = '../assets/scissors.jpg';
-                winImage.src = '../assets/rockbeatsscissors.jpg';
-                winner.innerHTML = "Player Wins!";
-                wins.innerText = parseInt(wins.innerText)+1;
-            }
-            break;
-            case 'paper':
-                playerImage.src = '../assets/paper.jpg';
-            if (compInput === 0) {
-                compImage.src = '../assets/rock.jpg';
-                winImage.src = '../assets/papercoversrock.jpg';
-                winner.innerHTML = "Player Wins!";
-                wins.innerText = parseInt(wins.innerText)+1;
-            } else if (compInput === 1) {
-                compImage.src = '../assets/paper.jpg';
-                winImage.src = '../assets/draw.jpg';
-                winner.innerHTML = "It's a draw!";
-                draws.innerText = parseInt(draws.innerText)+1;
-            } else {
-                compImage.src = '../assets/scissors.jpg';
-                winImage.src = '../assets/scissorsbeatpaper.jpg';
-                winner.innerHTML = "Computer Wins!";
-                losses.innerText = parseInt(losses.innerText)+1;
-            }
-            break;
-        case 'scissors':
-            playerImage.src = '../assets/scissors.jpg';
-            if (compInput === 0) {
-                compImage.src = '../assets/rock.jpg';
-                winImage.src = '../assets/rockbeatsscissors.jpg';
-                winner.innerHTML = "Computer Wins!";
-                losses.innerText = parseInt(losses.innerText)+1;
-            } else if (compInput === 1) {
-                compImage.src = '../assets/paper.jpg';
-                winImage.src = '../assets/scissorsbeatpaper.jpg';
-                winner.innerHTML = "Player Wins!";
-                wins.innerText = parseInt(wins.innerText)+1;
-            } else {
-                compImage.src = '../assets/scissors.jpg';
-                winImage.src = '../assets/draw.jpg';
-                winner.innerHTML = "It's a draw!";
-                draws.innerText = parseInt(draws.innerText)+1;
-            }
-            break;
-            
+                            winImage.src = '../assets/rockbeatsscissors.jpg';
+                            winner.innerHTML = "Player Wins!";
+                            wins.innerText = Number(wins.innerText)+1;
+                            window.sessionStorage.setItem("wins.innerText", wins.innerText.toString());
+                        }
+                        break;
+                        case 'paper':
+                            playerImage.src = '../assets/paper.jpg';
+                        if (compInput === 0) {
+                            compImage.src = '../assets/rock.jpg';
+                            winImage.src = '../assets/papercoversrock.jpg';
+                            winner.innerHTML = "Player Wins!";
+                            wins.innerText = Number(wins.innerText)+1;
+                            window.sessionStorage.setItem("wins.innerText", wins.innerText.toString());
+                        } else if (compInput === 1) {
+                            compImage.src = '../assets/paper.jpg';
+                            winImage.src = '../assets/draw.jpg';
+                            winner.innerHTML = "It's a draw!";
+                            draws.innerText = Number(draws.innerText)+1;
+                            window.sessionStorage.setItem("draws.innerText", draws.innerText.toString());
+                        } else {
+                            compImage.src = '../assets/scissors.jpg';
+                            winImage.src = '../assets/scissorsbeatpaper.jpg';
+                            winner.innerHTML = "Computer Wins!";
+                            losses.innerText = Number(losses.innerText)+1;
+                            window.sessionStorage.setItem("losses.innerText", losses.innerText.toString());
+                        }
+                        break;
+                        case 'scissors':
+                            playerImage.src = '../assets/scissors.jpg';
+                            if (compInput === 0) {
+                                compImage.src = '../assets/rock.jpg';
+                                winImage.src = '../assets/rockbeatsscissors.jpg';
+                                winner.innerHTML = "Computer Wins!";
+                                losses.innerText = Number(losses.innerText)+1;
+                                window.sessionStorage.setItem("losses.innerText", losses.innerText.toString());
+                            } else if (compInput === 1) {
+                                compImage.src = '../assets/paper.jpg';
+                                winImage.src = '../assets/scissorsbeatpaper.jpg';
+                                winner.innerHTML = "Player Wins!";
+                                wins.innerText = Number(wins.innerText)+1;
+                                window.sessionStorage.setItem("wins.innerText", wins.innerText.toString());
+                            } else {
+                                compImage.src = '../assets/scissors.jpg';
+                                winImage.src = '../assets/draw.jpg';
+                                winner.innerHTML = "It's a draw!";
+                                draws.innerText = Number(draws.innerText)+1;
+                                window.sessionStorage.setItem("draws.innerText", draws.innerText.toString());
+                            }
+                            break;
+                           
         }
     })
 }
+}
 
 
-// function reset() {
-//     sessionStorage.clear();
-// }
+function reset() {
+    losses.innerText = 0;
+    wins.innerText = 0;
+    draws.innerText = 0;
+    
+    window.sessionStorage.setItem("losses.innerText", 0);
+    window.sessionStorage.setItem("wins.innerText", 0);
+    window.sessionStorage.setItem("draws.innerText", 0);
+}
