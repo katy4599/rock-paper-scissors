@@ -96,7 +96,7 @@ function reset() {
     wins.innerText = 0;
     draws.innerText = 0;
     winner.innerHTML = "";
-    winImage.src = './rock-paper-scissors/default1.jpg';
+    winImage.src = './default1.jpg';
     
     window.sessionStorage.setItem("losses.innerText", 0);
     window.sessionStorage.setItem("wins.innerText", 0);
