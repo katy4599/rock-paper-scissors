@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    background-image: url("../assets/backgroundbw.jpg");
+    background-size: cover;
+}
+
+.title {
+    text-align: center;
+    margin-top: 3%;
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.content {
+    display:flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.text {
+    color: rgb(119, 136, 233);
+    font-family: roboto, sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;    
+}
+
+.win-statement {
+    color: red;
+    font-family: roboto, sans-serif;
+    font-size: 48px;
+    text-transform: uppercase; 
+    margin-top: 25%;
+}
+
+.selections {
+    margin-top: 3%;
+    
+}
+
+.player {
+    padding: 3% 0 3% 3%; 
+}
+
+.middle {
+    padding: 3% 10%;
+}
+
+.computer {
+    padding: 3% 3% 3% 0;
+}
+
+.pselect {
+    margin-left: 10%;
+}
+
+.cselect {
+    margin-right: 10%;
+}
+
+.images {
+    overflow: hidden; 
+    display: flex; 
+    justify-content:space-around;
+    
+}
+.win-image {
+    border: 6px solid;
+    border-radius: 10;
+    border-color: black;
+}
+
+.selects {
+    max-width: 20%; 
+    max-height: 20%;
+}
+
+.result {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.lower-row {
+    display: flex;
+}
+
+.buttons {
+    margin-top: 10%;
+    margin-right: 30%;
+    margin-left: 30%;
+    background-color: rgb(119, 136, 233);
+    width: 40%;
+    height: 10%;
+    text-align: center;
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    border: 3px solid;
+    border-color: black;
+
+}
+
+.reset-button {
+    margin-top: 10%;
+    margin-right: 17.5%;
+    margin-left: 17.5%;
+    background-color: red;
+    width: 65%;
+    height: 10%;
+    text-align: center;
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    border: 3px solid;
+    border-color: black;
+}
+
+.win-statement {
+    text-align: center;
+}
+
+.scoreboard {
+    margin-top: 20%;
+    background-color: rgb(119, 136, 233);
+    border: 3px solid;
+    border-color: black;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: white;
+}
+
+.table-title {
+    color: rgb(119, 136, 233);
+    font-family: roboto, sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+}

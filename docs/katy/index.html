@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>"Rock, Paper, Scissors!"</title>
+</head>
+<body onload="greet()" >
+   
+    
+    <div>
+        <h1 class="title" >Rock, Paper, Scissors!!!</h1>
+    </div>
+        <div class="content">
+            <div class="player">
+                <div>
+                    <h1 class="text" class="selections" class="pselect" id="pselect">Player Selects:</h1>
+                </div>
+                <div class="images" class="selects" id="pimg">
+                    <img id="player-image" src ="../assets/paper.jpg">
+                </div>
+                
+                <div>
+                    <button class="buttons" value="rock">ROCK</button>
+                    <button class="buttons" value="paper">PAPER</button><br>
+                    <button class="buttons" value="scissors">SCISSORS</button>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="images" class="result" id="result">
+                    <img id="win-image" class="win-image" src ="../assets/default1.jpg">
+                </div>
+                
+                <div>
+                    <h1 class="win-statement" id="win-statement"></h1>
+                </div>
+                <div>
+                    <button class="reset-button" value="reset" onclick="reset()">NEW GAME</button>
+                </div>
+            </div>
+            <div class="computer">
+                <div>
+                    <h1 class="text" class="selections" class="cselect" id="cselect">Computer Selects:</h1>
+                </div>
+                <div class="images" class="selects" id="pimg">
+                    <img id="comp-image"src ="../assets/scissors.jpg">
+                </div>
+                <div>
+                    <table class="scoreboard" class="text">
+                        <caption class="table-title">Scoreboard</caption>
+                        <tbody>
+                        <tr>
+                            <td>Player Wins:</td>
+                            <td id="wins" type="number">0</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Wins:</td>
+                            <td id="losses" type="number">0</td>
+                        </tr>
+                        <tr>
+                            <td>Draws:</td>
+                            <td id="draws" type="number">0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+ 
+
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
