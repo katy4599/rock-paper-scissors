@@ -40,7 +40,7 @@ const pselect = document.getElementById("pselect");
                         }
                         break;
                         case 'paper':
-                            playerImage.src = '.paper.jpg';
+                            playerImage.src = './paper.jpg';
                         if (compInput === 0) {
                             compImage.src = '.rock.jpg';
                             winImage.src = '.papercoversrock.jpg';
@@ -96,7 +96,7 @@ function reset() {
     wins.innerText = 0;
     draws.innerText = 0;
     winner.innerHTML = "";
-    winImage.src = '.default1.jpg';
+    winImage.src = './default1.jpg';
     
     window.sessionStorage.setItem("losses.innerText", 0);
     window.sessionStorage.setItem("wins.innerText", 0);
