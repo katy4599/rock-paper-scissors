@@ -6,10 +6,10 @@ body {
 
 .title {
     text-align: center;
-    margin-top: 5%;
+    margin-top: 3%;
     color: white;
     font-family: roboto, sans-serif;
-    font-size: 40px;
+    font-size: 48px;
     text-transform: uppercase;
 }
 
@@ -17,6 +17,21 @@ body {
     display:flex;
     align-items: top;
     justify-content: center;
+}
+
+.text {
+    color: rgb(119, 136, 233);
+    font-family: roboto, sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;    
+}
+
+.win-statement {
+    color: red;
+    font-family: roboto, sans-serif;
+    font-size: 48px;
+    text-transform: uppercase; 
+    margin-top: 25%;
 }
 
 .selections {
@@ -71,8 +86,34 @@ body {
 }
 
 .buttons {
-    margin-top: 20%;
+    margin-top: 10%;
+    margin-right: 30%;
+    margin-left: 30%;
+    background-color: rgb(119, 136, 233);
+    width: 40%;
+    height: 10%;
+    text-align: center;
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    border: 3px solid;
+    border-color: black;
 
+}
+
+.reset-button {
+    margin-top: 10%;
+    margin-right: 17.5%;
+    margin-left: 17.5%;
+    background-color: red;
+    width: 65%;
+    height: 10%;
+    text-align: center;
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    border: 3px solid;
+    border-color: black;
 }
 
 .win-statement {
@@ -81,5 +122,20 @@ body {
 
 .scoreboard {
     margin-top: 20%;
-    background-color: #ced4da;
+    background-color: rgb(119, 136, 233);
+    border: 3px solid;
+    border-color: black;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: white;
+}
+
+.table-title {
+    color: rgb(119, 136, 233);
+    font-family: roboto, sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
 }

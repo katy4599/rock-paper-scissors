@@ -28,7 +28,7 @@ const pselect = document.getElementById("pselect");
                         } else if (compInput === 1) {
                             compImage.src = '../assets/paper.jpg';
                             winImage.src = '../assets/papercoversrock.jpg';
-                            winner.innerHTML = "Computer Wins!";
+                            winner.innerHTML = "Try Again!";
                             losses.innerText = Number(losses.innerText)+1;
                             window.sessionStorage.setItem("losses.innerText", losses.innerText.toString());
                         } else {
@@ -56,7 +56,7 @@ const pselect = document.getElementById("pselect");
                         } else {
                             compImage.src = '../assets/scissors.jpg';
                             winImage.src = '../assets/scissorsbeatpaper.jpg';
-                            winner.innerHTML = "Computer Wins!";
+                            winner.innerHTML = "Try Again!";
                             losses.innerText = Number(losses.innerText)+1;
                             window.sessionStorage.setItem("losses.innerText", losses.innerText.toString());
                         }
@@ -66,7 +66,7 @@ const pselect = document.getElementById("pselect");
                             if (compInput === 0) {
                                 compImage.src = '../assets/rock.jpg';
                                 winImage.src = '../assets/rockbeatsscissors.jpg';
-                                winner.innerHTML = "Computer Wins!";
+                                winner.innerHTML = "Try Again!";
                                 losses.innerText = Number(losses.innerText)+1;
                                 window.sessionStorage.setItem("losses.innerText", losses.innerText.toString());
                             } else if (compInput === 1) {
@@ -91,9 +91,12 @@ const pselect = document.getElementById("pselect");
 
 
 function reset() {
+    let winImage = document.getElementById("win-image");
     losses.innerText = 0;
     wins.innerText = 0;
     draws.innerText = 0;
+    winner.innerHTML = "";
+    winImage.src = '../assets/default1.jpg';
     
     window.sessionStorage.setItem("losses.innerText", 0);
     window.sessionStorage.setItem("wins.innerText", 0);
