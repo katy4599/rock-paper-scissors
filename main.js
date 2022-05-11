@@ -18,22 +18,22 @@ const pselect = document.getElementById("pselect");
               
               switch (event.target.value) {
                   case 'rock':
-                      playerImage.src = '.rock.jpg';
+                      playerImage.src = './rock.jpg';
                       if (compInput === 0) {
-                          compImage.src = '.rock.jpg';
-                          winImage.src = '.draw.jpg';
+                          compImage.src = './rock.jpg';
+                          winImage.src = './draw.jpg';
                           winner.innerHTML = "It's a draw!";
                           draws.innerText = Number(draws.innerText)+1;
                           window.sessionStorage.setItem("draws.innerText", draws.innerText.toString());
                         } else if (compInput === 1) {
-                            compImage.src = '.paper.jpg';
-                            winImage.src = '.papercoversrock.jpg';
+                            compImage.src = './paper.jpg';
+                            winImage.src = './papercoversrock.jpg';
                             winner.innerHTML = "Try Again!";
                             losses.innerText = Number(losses.innerText)+1;
                             window.sessionStorage.setItem("losses.innerText", losses.innerText.toString());
                         } else {
-                            compImage.src = '.scissors.jpg';
-                            winImage.src = '.rockbeatsscissors.jpg';
+                            compImage.src = './scissors.jpg';
+                            winImage.src = './rockbeatsscissors.jpg';
                             winner.innerHTML = "Player Wins!";
                             wins.innerText = Number(wins.innerText)+1;
                             window.sessionStorage.setItem("wins.innerText", wins.innerText.toString());
@@ -42,42 +42,42 @@ const pselect = document.getElementById("pselect");
                         case 'paper':
                             playerImage.src = './paper.jpg';
                         if (compInput === 0) {
-                            compImage.src = '.rock.jpg';
-                            winImage.src = '.papercoversrock.jpg';
+                            compImage.src = './rock.jpg';
+                            winImage.src = './papercoversrock.jpg';
                             winner.innerHTML = "Player Wins!";
                             wins.innerText = Number(wins.innerText)+1;
                             window.sessionStorage.setItem("wins.innerText", wins.innerText.toString());
                         } else if (compInput === 1) {
-                            compImage.src = '.paper.jpg';
-                            winImage.src = '.draw.jpg';
+                            compImage.src = './paper.jpg';
+                            winImage.src = './draw.jpg';
                             winner.innerHTML = "It's a draw!";
                             draws.innerText = Number(draws.innerText)+1;
                             window.sessionStorage.setItem("draws.innerText", draws.innerText.toString());
                         } else {
-                            compImage.src = '.scissors.jpg';
-                            winImage.src = '.scissorsbeatpaper.jpg';
+                            compImage.src = './scissors.jpg';
+                            winImage.src = './scissorsbeatpaper.jpg';
                             winner.innerHTML = "Try Again!";
                             losses.innerText = Number(losses.innerText)+1;
                             window.sessionStorage.setItem("losses.innerText", losses.innerText.toString());
                         }
                         break;
                         case 'scissors':
-                            playerImage.src = '.rock-paper-scissors/scissors.jpg';
+                            playerImage.src = './scissors.jpg';
                             if (compInput === 0) {
-                                compImage.src = '.rock-paper-scissors/rock.jpg';
-                                winImage.src = '.rock-paper-scissors/rockbeatsscissors.jpg';
+                                compImage.src = './rock.jpg';
+                                winImage.src = './rockbeatsscissors.jpg';
                                 winner.innerHTML = "Try Again!";
                                 losses.innerText = Number(losses.innerText)+1;
                                 window.sessionStorage.setItem("losses.innerText", losses.innerText.toString());
                             } else if (compInput === 1) {
-                                compImage.src = '.paper.jpg';
-                                winImage.src = '.scissorsbeatpaper.jpg';
+                                compImage.src = './paper.jpg';
+                                winImage.src = './scissorsbeatpaper.jpg';
                                 winner.innerHTML = "Player Wins!";
                                 wins.innerText = Number(wins.innerText)+1;
                                 window.sessionStorage.setItem("wins.innerText", wins.innerText.toString());
                             } else {
-                                compImage.src = '.scissors.jpg';
-                                winImage.src = '.draw.jpg';
+                                compImage.src = './scissors.jpg';
+                                winImage.src = './draw.jpg';
                                 winner.innerHTML = "It's a draw!";
                                 draws.innerText = Number(draws.innerText)+1;
                                 window.sessionStorage.setItem("draws.innerText", draws.innerText.toString());
